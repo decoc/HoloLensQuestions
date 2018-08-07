@@ -25,7 +25,7 @@ Mixed Reality Toolkitのバージョンはいくつかあり，先のGitHubリ�
 - Fall Creators Update
 
 ### MRTKの機能
-MRTKは非常に多機能で数多くのコンポーネントがあります。
+MRTKは多機能で数多くのコンポーネントがあります。
 
 #### 概要把握
 どんなことができるかの全体を把握するにはこちらのまとめがおすすめです。  
@@ -51,6 +51,16 @@ MRTKは非常に多機能で数多くのコンポーネントがあります。
 
 一連の開発プロセスを学ぶにはこちらのスライドがおすすめです。  
 [UnityによるHoloLensアプリケーション入門](https://www.slideshare.net/YuichiIshii/unityhololens-92864583)
+
+---
+## Windows 10 SDK
+HoloLensアプリをビルドするためには，Windows 10 SDK が必要です。環境は構築できているのにビルドできないという場合，Windows 10 SDKが入っていないという事がよくありました。HoloLensのアプリ開発には10.0.14393以上が最低限必要でしたが，例えばImmersive向けにビルドする際はコントローラを扱うには最低限10.0.16299以上であったり，更に振動機能が使いたい場合は10.0.17134が必要になります。MRTKを使う時には特に引っかかるポイントだったりします。  
+
+### インストールする
+Windows 10 SDK は[Archive](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive)から直接DLもできますが，Visual Studioからインストールするのが楽です。  
+「Visual Studio Installer」 を立ち上げて，「詳細->変更」を押すと一覧が表示されます。「ユニバーサルWindowsプラットフォーム開発」を選択してインストールすると最新のWindows 10 SDK がインストールされます。また，この時オプションから過去のバージョンのWindows SDK も指定してDLすることができます。
+
+---
 
 ## Holographic Remoting
 ちょっとした変更に対して，HoloLensアプリを毎回実機にビルド，デプロイするのは時間も手間もかかります。Holographic Remoting はその確認作業の手間を大きく削減してくれます。  
