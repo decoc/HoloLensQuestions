@@ -20,6 +20,22 @@ Windows 10 SDK は[Archive](https://developer.microsoft.com/en-us/windows/downlo
 「Visual Studio Installer」 を立ち上げて，「詳細->変更」を押すと一覧が表示されます。「ユニバーサルWindowsプラットフォーム開発」を選択してインストールすると最新のWindows 10 SDK がインストールされます。また，この時オプションから過去のバージョンのWindows SDK も指定してDLすることができます。
 
 ---
+
+## Capabilities
+UnityからアプリをデプロイしてもCapabilitiesが有効になっておらず，機能が使えないという場合があります。例えば，カメラやマイクにアクセスする場合や，クライアントとしてサーバーと通信する，ファイルへアクセスする場合などはCapabilitiesでアプリケーションが利用できるように権限を与えてやる必要があります。  CapabilitiesはUnityのFile-> Build Settings -> Player Settings -> XR Settings -> Publish Settingsから設定します。
+
+量が多いので代表的なものだけあげていきます。
+
+|Capabilities|説明|
+|:--:|:---|
+|InternetClient|Sharingなどネットワークを経由して情報をやりとりする場合に必要です。|
+|WebCam|VuforiaなどCameraを使う場合に必要です。|
+|Microphone|音声入力などを使う場合に必要です。|
+|SpatialPerception|SpatialMappingを使う場合に必要です。|
+|Bluetooth|Xboxコントローラなどを使う場合に必要です。|
+
+---
+
 ## Mixed Reality Toolkit
 [Mixed Reality Toolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity)は，HoloLensのアプリケーション開発をサポートするコンポーネント群です。よく勘違いされるのですが，MRTKはHoloLensアプリの開発に必ずしも必要はありません。ですが，MRTKを使うことでコーディングが苦手でも開発が楽にすむ部分が多いです。例えばHoloLens用のカメラオブジェクトや入力，UX周りをPrefabを用いて直ぐにシーンを構築できるだけではなく，UnityProjectの初期設定やアプリケーションのデプロイなどもサポートしてくれます。  
 
@@ -81,6 +97,8 @@ HoloLensのMicrosoft Storeから，[Holographic Remoting Player](https://www.mic
 
 ### よくある誤解と注意点
 Holographic Remotingは確かに便利機能ですがあくまで実行しているのは，PC側でHoloLens上ではありません。エアタップといった入力イベントはシミュレートできますが，HoloLensのカメラは利用できない，つまりVuforiaといったHoloLensのカメラを使ったデバッグはできません。また，UWPのコードも同様に実行されるのはEditor環境なので実行されないということに注意してください。
+
+---
 
 ## Trouble Shooting
 ### 調べる
