@@ -79,41 +79,17 @@ VRコンテンツ開発ガイドという名前ですが，HoloLens開発の入�
 
 ---
 ## ブログ/Qiita
-
-[MRが楽しい](http://bluebirdofoz.hatenablog.com/)
-
-    HoloLensに関する記事投稿数は断トツで多いです。内容も丁寧で読みやすいです。
-
-[D.YAMA Blog](http://blog.d-yama7.com/)
-
-    イラストも多く，HoloLensの入力周りについて非常に丁寧に説明されています。特に位置合わせに関する記事は参考になると思います。
-
-[なんかいろいろしてみます](http://akihiro-document.azurewebsites.net/categories/hololens/)
-
-    HoloLensの実装でよく当たる問題について解説付きのコードが載っています。
-
-[たるこすの日記](https://tarukosu.hatenablog.com/entry/2016/11/26/184525)
-
-    HoloLensを様々なデバイスと繋げています。
-
-[miyauraさんのQiita](https://qiita.com/miyaura)
-
-    Qiitaで多くの記事を投稿しています。MRTKの使い方についてはmiyauraの記事が参考になると思います。
-
-[morio36さんのQiita](https://qiita.com/morio36)
-
-    主にHoloLensとAzureとの連携記事を多く投稿しています。
-
-[凹Tips](http://tips.hecomi.com/entry/2017/02/12/211458)
-
-    HoloLensの記事数はあまり多くはないですが非常に参考になるかと思います
-
-[HoloLens光学系の謎に迫る](https://www.slideshare.net/AmadeusSVX/hololens-85758620)
-
-    こちらはSlideですがHoloLensの仕組みに迫る内容なので一度読んでみるといいと思います。
-
-[デコシノニッキ](https://www.tattichan.work/)
-
-    このWikiを書いている人のブログです。雑多です。
+|||
+|:---|:---|
+|[MRが楽しい](http://bluebirdofoz.hatenablog.com/)|HoloLensに関する記事投稿数は断トツで多いです。内容も丁寧で読みやすいです。|
+|[D.YAMA Blog](http://blog.d-yama7.com/)|イラストも多く，HoloLensの入力周りについて非常に丁寧に説明されています。特に位置合わせに関する記事は参考になると思います。|
+|[なんかいろいろしてみます](http://akihiro-document.azurewebsites.net/categories/hololens/)|HoloLensの実装でよく当たる問題について解説付きのコードが載っています。|
+|[たるこすの日記](https://tarukosu.hatenablog.com/entry/2016/11/26/184525)|HoloLensを様々なデバイスと繋げています。|
+|||
+|[miyauraさんのQiita](https://qiita.com/miyaura)|Qiitaで多くの記事を投稿しています。MRTKの使い方についてはmiyauraの記事が参考になると思います。|
+|[morio36さんのQiita](https://qiita.com/morio36)|主にHoloLensとAzureとの連携記事を多く投稿しています。|
+|[凹Tips](http://tips.hecomi.com/entry/2017/02/12/211458)|HoloLensの記事数はあまり多くはないですが非常に参考になるかと思います|
+|[HoloLens光学系の謎に迫る](https://www.slideshare.net/AmadeusSVX/hololens-85758620)|こちらはSlideですがHoloLensの仕組みに迫る内容なので一度読んでみるといいと思います。|
+|[デコシノニッキ](https://www.tattichan.work/)|このWikiを書いている人のブログです。雑多です。|
 
 ---
