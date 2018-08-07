@@ -29,3 +29,19 @@ VRコンテンツ開発ガイドという名前ですが，HoloLens開発の入�
 |[デコシノニッキ](https://www.tattichan.work/)|このWikiを書いている人のブログです。雑多です。|
 
 ---
+
+## Trouble Shooting
+### 調べる
+OSやUnityのバージョンによっては描画が安定しない，クラッシュするなど動作が不安定な場合があります。解決しない場合，既知の問題の可能性があります。[Issue Tracker](https://issuetracker.unity3d.com/) や [Release Note](https://unity3d.com/jp/unity/whats-new/unity-2018.2.0)が問題解決のヒントになります。また，MRTKの不具合に関しては[issue](https://github.com/Microsoft/MixedRealityToolkit-Unity/issues)から検索しましょう。
+
+### 聞いてみる
+HoloLensのFBコミュニティグループで聞いてみると誰かしらから反応があると思います。  
+[HoloLens/Windows Mixed Reality ユーザーズグループ](https://www.facebook.com/groups/149608962203470/?ref=group_header)
+
+他にもTwitterで活動しているHoloLensアプリデベロッパーが多くいるので，捕まえて聞いてみるのも手です。#HoloLens, #HoloLensJPで検索してみましょう。
+
+    ※質問の際は，Unityのバージョン，MRTKのバージョンなど開発環境を明記して聞きましょう。  
+    問題が開発環境由来の場合が多く，それだけで問題が解決する場合も多いです。  
+    回答する側も問題の切り分けがしやすいので意識してみましょう。
+    
+---
