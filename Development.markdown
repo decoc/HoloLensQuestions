@@ -52,6 +52,22 @@ MRTKは非常に多機能で数多くのコンポーネントがあります。
 一連の開発プロセスを学ぶにはこちらのスライドがおすすめです。  
 [UnityによるHoloLensアプリケーション入門](https://www.slideshare.net/YuichiIshii/unityhololens-92864583)
 
+## Holographic Remoting
+ちょっとした変更に対して，HoloLensアプリを毎回実機にビルド，デプロイするのは時間も手間もかかります。Holographic Remoting はその確認作業の手間を大きく削減してくれます。  
+Holographic Remotingを使うには，HoloLensとUnityEditor側でそれぞれ準備が必要です。  
+
+### HoloLens: 
+HoloLensのMicrosoft Storeから，[Holographic Remoting Player](https://www.microsoft.com/ja-jp/p/holographic-remoting-player/9nblggh4sv40) をDLし起動する。
+
+### UnityEditor: 
+1. File-> Build Settings -> Player Settings -> XR Settings -> Virtual Reality Settings を有効にする
+2. Window -> Holographic Emulation -> Emulation Mode を None から Remote to Device に変更する
+3. Remote Machine に HoloLens に表示されているIPアドレスを入力する -> Connect ボタンを押す
+4. UnityEditorを再生するとHoloLensに映像が表示されるはずです。
+
+### よくある誤解と注意点
+Holographic Remotingは確かに便利機能ですがあくまで実行しているのは，PC側でHoloLens上ではありません。エアタップといった入力イベントはシミュレートできますが，HoloLensのカメラは利用できない，つまりVuforiaといったHoloLensのカメラを使ったデバッグはできません。また，UWPのコードも同様に実行されるのはEditor環境なので実行されないということに注意してください。
+
 ## Trouble Shooting
 ### 調べる
 OSやUnityのバージョンによっては描画が安定しない，クラッシュするなど動作が不安定な場合があります。解決しない場合，既知の問題の可能性があります。[Issue Tracker](https://issuetracker.unity3d.com/) や [Release Note](https://unity3d.com/jp/unity/whats-new/unity-2018.2.0)が問題解決のヒントになります。また，MRTKの不具合に関しては[issue](https://github.com/Microsoft/MixedRealityToolkit-Unity/issues)から検索しましょう。
@@ -85,7 +101,6 @@ VRコンテンツ開発ガイドという名前ですが，HoloLens開発の入�
 |[D.YAMA Blog](http://blog.d-yama7.com/)|イラストも多く，HoloLensの入力周りについて非常に丁寧に説明されています。特に位置合わせに関する記事は参考になると思います。|
 |[なんかいろいろしてみます](http://akihiro-document.azurewebsites.net/categories/hololens/)|HoloLensの実装でよく当たる問題について解説付きのコードが載っています。|
 |[たるこすの日記](https://tarukosu.hatenablog.com/entry/2016/11/26/184525)|HoloLensを様々なデバイスと繋げています。|
-|||
 |[miyauraさんのQiita](https://qiita.com/miyaura)|Qiitaで多くの記事を投稿しています。MRTKの使い方についてはmiyauraの記事が参考になると思います。|
 |[morio36さんのQiita](https://qiita.com/morio36)|主にHoloLensとAzureとの連携記事を多く投稿しています。|
 |[凹Tips](http://tips.hecomi.com/entry/2017/02/12/211458)|HoloLensの記事数はあまり多くはないですが非常に参考になるかと思います|
