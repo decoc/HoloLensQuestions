@@ -8,6 +8,18 @@ Unityのバージョンによって，HoloLensで利用できるAPIやサポー�
 最新のUnity2018でも開発は可能ですが，後述するMixed Reality Toolkit の相性問題もあるため最新の環境が最良とは断言できません。
 
 ---
+## Visual Studio
+コードを書くためのツールは何でもいいのですが，Unityで作ったアプリをビルドし，HoloLens上に展開するためには，[Visual Studio 2017](https://imagine.microsoft.com/ja-jp/Catalog/Product/530) が必要になります。  
+
+---
+## Windows 10 SDK
+HoloLensアプリをビルドするためには，Windows 10 SDK が必要です。環境は構築できているのにビルドできないという場合，Windows 10 SDKが入っていないという事がよくありました。HoloLensのアプリ開発には10.0.14393が最低限必要でしたが，例えばImmersive向けでコントローラを扱うには最低限10.0.16299以上であったり，更に振動機能が使いたい場合は10.0.17134が必要になります。MRTKを使う時には特に引っかかるポイントだったりします。  
+
+### インストールする
+Windows 10 SDK は[Archive](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive)から直接DLもできますが，Visual Studioからインストールするのが楽です。  
+「Visual Studio Installer」 を立ち上げて，「詳細->変更」を押すと一覧が表示されます。「ユニバーサルWindowsプラットフォーム開発」を選択してインストールすると最新のWindows 10 SDK がインストールされます。また，この時オプションから過去のバージョンのWindows SDK も指定してDLすることができます。
+
+---
 ## Mixed Reality Toolkit
 [Mixed Reality Toolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity)は，HoloLensのアプリケーション開発をサポートするコンポーネント群です。よく勘違いされるのですが，MRTKはHoloLensアプリの開発に必ずしも必要はありません。ですが，MRTKを使うことでコーディングが苦手でも開発が楽にすむ部分が多いです。例えばHoloLens用のカメラオブジェクトや入力，UX周りをPrefabを用いて直ぐにシーンを構築できるだけではなく，UnityProjectの初期設定やアプリケーションのデプロイなどもサポートしてくれます。  
 
@@ -51,14 +63,6 @@ MRTKは多機能で数多くのコンポーネントがあります。
 
 一連の開発プロセスを学ぶにはこちらのスライドがおすすめです。  
 [UnityによるHoloLensアプリケーション入門](https://www.slideshare.net/YuichiIshii/unityhololens-92864583)
-
----
-## Windows 10 SDK
-HoloLensアプリをビルドするためには，Windows 10 SDK が必要です。環境は構築できているのにビルドできないという場合，Windows 10 SDKが入っていないという事がよくありました。HoloLensのアプリ開発には10.0.14393以上が最低限必要でしたが，例えばImmersive向けにビルドする際はコントローラを扱うには最低限10.0.16299以上であったり，更に振動機能が使いたい場合は10.0.17134が必要になります。MRTKを使う時には特に引っかかるポイントだったりします。  
-
-### インストールする
-Windows 10 SDK は[Archive](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive)から直接DLもできますが，Visual Studioからインストールするのが楽です。  
-「Visual Studio Installer」 を立ち上げて，「詳細->変更」を押すと一覧が表示されます。「ユニバーサルWindowsプラットフォーム開発」を選択してインストールすると最新のWindows 10 SDK がインストールされます。また，この時オプションから過去のバージョンのWindows SDK も指定してDLすることができます。
 
 ---
 
@@ -118,3 +122,6 @@ VRコンテンツ開発ガイドという名前ですが，HoloLens開発の入�
 |[デコシノニッキ](https://www.tattichan.work/)|このWikiを書いている人のブログです。雑多です。|
 
 ---
+## Mixed Reality Academy
+[Mixed Reality Academy](https://docs.microsoft.com/en-us/windows/mixed-reality/academy) はマイクロソフトからMRコンテンツを開発するための学習ページです。内容は全て英語で，アップデートもそこまで頻度は高くはありませんが，開発で使う機能の一つ一つを学習することができます。HoloLensだけではなく，Immersiveの学習内容もサポートされており，Azure連携の仕方も学べます。
+
