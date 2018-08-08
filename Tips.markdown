@@ -20,14 +20,19 @@
 - 2017/03: [HologramsっぽくTransformを操作する](http://blog.d-yama7.com/archives/481)
 
 ## Connect
+- 2018/02: [HoloLensからmicro:bitをBLE連携するメモ](https://www.1ft-seabass.jp/memo/2018/02/21/hololens-microbit-ble-send-receive/)
 - 2017/11: [HoloLens、Firebase、Node.jsでドローンを遠隔操作してみた](https://qiita.com/h-takauma/items/54e968268afeaadbd6b4)
 - 2017/11: [Wii リモコンを HoloLens コントローラとして使ってみる](http://tarukosu.hatenablog.com/entry/HoloLensWiiMote)
 - 2017/10: [TouchDesignerとHoloLensを繋ぐ](https://qiita.com/tatmos/items/4245cc1fe09fe1cd3f2a)
 - 2017/08: [HoloLens で iBeacon を受信する](https://tarukosu.hatenablog.com/entry/2017/08/13/205849)
 - 2017/07: [HoloLens と PC でマウスカーソルを行き来させる](https://tarukosu.hatenablog.com/entry/2017/07/09/222939)
+- 2017/06: [Device Portal APIを使ってNode-RED経由でHoloLensからアプリを起動させるメモ](https://www.1ft-seabass.jp/memo/2017/06/18/nodered-access-device-portal-api-launch-app/)
 
 ## DataBase
 - 2017/12: [HoloLensでSQLiteを使ってみよう！](https://qiita.com/morio36/items/3fa6f5bf9da9c15373d5)
+
+## DeviceSettings
+- 2017/07: [HoloLensのスリープ時間を変更する](http://www.tattichan.work/entry/2017/07/17/)
 
 ## Emulator
 - 2018/06: [HoloLens開発環境を構築してエミュレーターでOrigamiを実行するまで](https://qiita.com/whitedog0215/items/e7a53e73660438afde21)
@@ -72,10 +77,15 @@
 
 ## Network
 - 2018/02: [【メモ】HoloLensでSSIDと信号強度を取得する](http://www.tattichan.work/entry/2018/02/09/%E3%80%90%E3%83%A1%E3%83%A2%E3%80%91HoloLens%E3%81%A7SSID%E3%81%A8%E4%BF%A1%E5%8F%B7%E5%BC%B7%E5%BA%A6%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B)
+- 2017/10: [HoloLens で WebSocket を使う](https://tarukosu.hatenablog.com/entry/HoloLensWebSocket)
+- 2017/04: [HoloLens で UDP 通信を行う方法について調べてみた](http://tips.hecomi.com/entry/2017/04/19/011320)
 
 ## OpenCV
 - 2018/07: [HoloLensでOpenCVを使う環境を構築](https://qiita.com/yutoakaut/items/f70f9752507e64a80888)
 - 2018/06: [【UWPアプリでOpenCVを無料で使おう！】C#(.NET) UWPアプリへのC++ダイナミックライブラリ(dll)の組み込み方](https://qiita.com/xsmiledur/items/127abaef42c5f1126f5e)
+
+## Occulusion
+- 2017/02: [HoloLens で向こう側が見える窓を動的に追加してみる](http://tips.hecomi.com/entry/2017/02/18/190949)
 
 ## Optimization
 - 2018/05: [モバイルVR向けのGoogle Seuratを触ってみる](https://www.tattichan.work/entry/seurat)
@@ -96,9 +106,6 @@
 - 2018/04: [HoloLensRS4のWindowsML+Research modeでハンドジェスチャー](http://akihiro-document.azurewebsites.net/post/hololens_winmlandresearch/)
 - 2018/04: [HoloLens RS4のResearch modeを使ってみる(Unity利用編)](http://akihiro-document.azurewebsites.net/post/hololens_researchmode2/)
 
-## DeviceSettings
-- 2017/07: [HoloLensのスリープ時間を変更する](http://www.tattichan.work/entry/2017/07/17/)
-
 ## Sharing
 - 2018/08: [Mixed Reality Toolkit - Unityのサンプル「SharingWithUNET」をUnity Editorのデバッグ実行で確認する。](https://qiita.com/miyaura/items/df380296229b80cb3ed6)
 - 2018/02: [HoloLens で自作アプリに UNET ベースの Sharing を組み込む方法](https://qiita.com/arcsin16/items/798175d2afab29dab5a9)
@@ -115,6 +122,7 @@
 - 2017/05: [HoloLens のカメラ映像を使って Spatial Mapping にテクスチャをつける シリーズ](https://tarukosu.hatenablog.com/entry/2017/05/28/211529)
 
 ## SpectatorView
+- 2018/07: [iOSで動作するSpectatorViewを試してみる ](https://blog.nextscape.net/archives/Date/2018/07/hololens-spectatorview)
 
 ## StabilizationPlane
 - 2018/05: [EnableDepthBufferで幸せになりたかった話](http://www.tattichan.work/entry/depthbuffer)
@@ -127,12 +135,17 @@
 ## UnrealEngine4
 - 2017/12: [UE4でもHoloLens/WinMRHeadsetの開発がしたい！](https://qiita.com/diberidarshi/items/084d6313de9a380bea3e)
 
+## UnderstandingHoloLens
+- 2018/01: [HoloLens光学系の謎に迫る](https://www.slideshare.net/AmadeusSVX/hololens-85758620)
+- 2017/03: [HoloLens で使える Near Clip 表現について解説してみた](http://tips.hecomi.com/entry/2017/03/27/003631)
+- 2017/02: [HoloLens のアプリ開発はじめました](https://www.1ft-seabass.jp/memo/2017/06/18/nodered-access-device-portal-api-launch-app/)
+
+## UX
+- 2017/04: [HoloLens 用の Body-Locked な UI を作ってみた](http://tips.hecomi.com/entry/2017/04/01/171121)
+
 ## Voice
 - 2018/01: [HoloLensで多言語ベースの音声入力システムを作る際のTips - その1：マイクからの音声取得編](https://qiita.com/miyaura/items/3a4a130175d272ea85e6)
 - 2017/07: [Unityでマイク入力からピッチ検出をするまで](https://qiita.com/niusounds/items/b8858a2b043676185a54)
-
-## WebSocket
-- 2017/10: [HoloLens で WebSocket を使う](https://tarukosu.hatenablog.com/entry/HoloLensWebSocket)
 
 ## WebVR
 - 2018/03: [HoloLens RS4でWebVRを実行する](https://www.tattichan.work/entry/2018/03/30/HoloLens_RS4%E3%81%A7WebVR%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B)
