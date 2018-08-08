@@ -40,7 +40,7 @@
  これでHoloLens側から任意のマーカーを認識できるようになります。
 
 ## Vuforiaを使った位置合わせ
-先のDefault Target BehaviourにアタッチされているDefault Trackable Event Handler が 参考になります。　　
+VuforiaのTracking状態に応じた処理は，先のImageTargetにアタッチされているDefault Trackable Event Handler が 参考になります。　　
 ITrackableEventHandlerを継承し，OnTrackableStateChangedを実装した本クラスを通じてTrackingの状態を取得できます。例えば，Default Trackable Event Handlerでは，マーカーを認識したタイミングでImageTarget配下のオブジェクトを描画し，ロストしたタイミングで描画をオフにしています。  
 
 ですので，例えばマーカーを認識したタイミングでマーカーの位置とクォータニオンをイベントで送信し基準点として各オブジェクトの位置を補正し，使わなくなったARCameraをオフにするといった処理もできます。Vuforiaカメラは立ち上げたままだとアプリケーションのパフォーマンスへ影響するため，必要に応じてオンオフする方が好ましいです。
