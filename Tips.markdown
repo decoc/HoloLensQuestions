@@ -1,9 +1,9 @@
 # 逆引きTips
 
-## 2Dと3D
+## 2D&3D View
 - 2017/05: [HoloLensアプリにて3D Viewと2D Viewを行き来する](http://blog.d-yama7.com/archives/807)
 
-## 3Dアプリランチャ―
+## 3D App Launcher
 - 2018/04: [HoloLensの3Dアプリランチャーにアニメーションを複数設定する](https://qiita.com/decchi/items/3daafdb864618ee96b5b)
 - 2018/04: [HoloLensで3D app launcherをアニメーションする](https://www.tattichan.work/entry/animated3dapp)
 
@@ -70,11 +70,15 @@
 - 2017/04: [HoloLens の空間マップで NavMesh を使ってみる シリーズ](https://tarukosu.hatenablog.com/entry/2017/04/23/183546)
 - 2017/04: [HoloLensで実現する動的経路探索](https://qiita.com/morio36/items/d75228d2ccdb9c24574b)
 
+## Network
+- 2018/02: [【メモ】HoloLensでSSIDと信号強度を取得する](http://www.tattichan.work/entry/2018/02/09/%E3%80%90%E3%83%A1%E3%83%A2%E3%80%91HoloLens%E3%81%A7SSID%E3%81%A8%E4%BF%A1%E5%8F%B7%E5%BC%B7%E5%BA%A6%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B)
+
 ## OpenCV
 - 2018/07: [HoloLensでOpenCVを使う環境を構築](https://qiita.com/yutoakaut/items/f70f9752507e64a80888)
 - 2018/06: [【UWPアプリでOpenCVを無料で使おう！】C#(.NET) UWPアプリへのC++ダイナミックライブラリ(dll)の組み込み方](https://qiita.com/xsmiledur/items/127abaef42c5f1126f5e)
 
 ## Optimization
+- 2018/05: [モバイルVR向けのGoogle Seuratを触ってみる](https://www.tattichan.work/entry/seurat)
 - 2017/11: [【使用感】Unity等で使えるポリゴン削減ツール「Simplygon」](https://qiita.com/soh1106/items/b5eb0e7941ad57576ddc)
 
 ## Plugin
@@ -91,6 +95,9 @@
 - 2018/04: [Research modeで取得した深度(Depth)データを可視化する（HoloLens RS4 Preview）](https://qiita.com/sotanmochi/items/b720e88ca271544ce2cb)
 - 2018/04: [HoloLensRS4のWindowsML+Research modeでハンドジェスチャー](http://akihiro-document.azurewebsites.net/post/hololens_winmlandresearch/)
 - 2018/04: [HoloLens RS4のResearch modeを使ってみる(Unity利用編)](http://akihiro-document.azurewebsites.net/post/hololens_researchmode2/)
+
+## DeviceSettings
+- 2017/07: [HoloLensのスリープ時間を変更する](http://www.tattichan.work/entry/2017/07/17/)
 
 ## Sharing
 - 2018/08: [Mixed Reality Toolkit - Unityのサンプル「SharingWithUNET」をUnity Editorのデバッグ実行で確認する。](https://qiita.com/miyaura/items/df380296229b80cb3ed6)
@@ -109,6 +116,11 @@
 
 ## SpectatorView
 
+## StabilizationPlane
+- 2018/05: [EnableDepthBufferで幸せになりたかった話](http://www.tattichan.work/entry/depthbuffer)
+- 2018/03: [Stabilization Planeとは何者なのか？ StabilizationPlaneModifierの中身を見る](http://www.tattichan.work/entry/2018/03/06/Stabilization_Plane%E3%81%A8%E3%81%AF%E4%BD%95%E8%80%85%E3%81%AA%E3%81%AE%E3%81%8B%EF%BC%9F_StabilizationPlaneModifier%E3%81%AE%E4%B8%AD%E8%BA%AB%E3%82%92%E8%A6%8B%E3%82%8B)
+- 2018/03: [Stabilization Planeとは何者なのか？基本動作を探る](http://www.tattichan.work/entry/2018/03/04/Stabilization_Plane%E3%81%A8%E3%81%AF%E4%BD%95%E8%80%85%E3%81%AA%E3%81%AE%E3%81%8B%EF%BC%9F%E6%8C%99%E5%8B%95%E3%82%92%E6%8E%A2%E3%82%8B_Part1)
+
 ## Test
 - 2018/04: [HoloLensのジェスチャー操作をテストする](http://blog.d-yama7.com/archives/1309)
 
@@ -121,6 +133,9 @@
 
 ## WebSocket
 - 2017/10: [HoloLens で WebSocket を使う](https://tarukosu.hatenablog.com/entry/HoloLensWebSocket)
+
+## WebVR
+- 2018/03: [HoloLens RS4でWebVRを実行する](https://www.tattichan.work/entry/2018/03/30/HoloLens_RS4%E3%81%A7WebVR%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B)
 
 ## WindowsML
 - 2018/04: [HoloLensとWindowsMLとCustomVisionを使って手書き認識をしてみる(学習データ利用編)](http://akihiro-document.azurewebsites.net/post/hololens_windowsmachinelearningpaint2/)
