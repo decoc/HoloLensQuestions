@@ -1,4 +1,4 @@
-#Tips逆引き
+# 逆引きTips
 
 ## HoloLensとIHMDで処理を書き分ける
 - 2017/11: [HoloLensとImmersive，Editorのデバイス切り分けについて](http://akihiro-document.azurewebsites.net/post/hololens_devicechange/)
