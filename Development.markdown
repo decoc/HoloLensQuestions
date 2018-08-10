@@ -54,9 +54,26 @@ UWPのアプリケーション開発ではこの[Scripting backend](https://docs
 
 これらの違いをちゃんと理解するためにはJITコンパイルとAOTコンパイルの仕組み，違いをまず知る必要があります。
 
+【参考】
 - [IL2CPPのしくみ](https://docs.unity3d.com/ja/current/Manual/IL2CPP-HowItWorks.html)
 - [IL2CPPに関する軽い話](https://www.google.co.jp/url?sa=t&rct=j&q=&esrc=s&source=web&cd=6&cad=rja&uact=8&ved=2ahUKEwiKtLyY3OHcAhUEQN4KHcxdCxcQFjAFegQIBhAB&url=https%3A%2F%2Fwww.slideshare.net%2FWooramYang%2Fil2-cpp-wooramyang-49666751&usg=AOvVaw2_L54wiVpvcgtfgYa2Lqvu)
 - [【Unity】Stripping Levelについて (プラットフォームによる差異の項)](https://www.f-sp.com/entry/2016/02/23/180816)
+
+## 導入
+.NETでもIL2CPPでも，UnityにComponentがなければビルドできません。
+
+### Unityを新規にインストールする場合
+以下の項目をOnにしてインストールしてください。
+- 2017: Windows Store .Net (or IL2CPP) Scripting Backend
+- 2018: UWP Build Supported .Net (or IL2CPP)
+
+### 既存のUnityに追加する場合
+Unityのインストーラから再度導入する形になります。新規インストールと同じ手順です。
+
+### UnityHubから追加する場合
+Installsから追加したいUnityのバージョンからAddComponentで導入できます。
+- 2017: Windows Store .Net (or IL2CPP) Scripting Backend
+- 2018: UWP Build Supported .Net (or IL2CPP)
 
 ---
 
