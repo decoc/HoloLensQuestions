@@ -36,6 +36,18 @@ UnityからアプリをデプロイしてもCapabilitiesが有効になってお
 
 ---
 
+# Scripting Backend
+UWPのアプリケーション開発ではこのScripting backendを.NETかIL2CPPを選択する必要があります。あまり解説記事も見当たらずおまじない的な扱いで使われている気がします。表面的な違いで言えば以下の違いになります。
+
+||ビルド速度|実行速度|C#プロジェクト出力の可否|サポート|
+|:---:|:---:|:---:|:---:|:---:|
+|.NET|早い|速くはない|可|将来的に切られる|
+|IL2CPP|遅い|速い|不可|積極的に移行作業が進む|
+
+また，.NET環境とIL2CPP環境のそれぞれで，動くものと動かないものがあったりします。例えばMRTKで過去のissueを検索してみると，IL2CPPではSharingが動作しないなどといった報告も見かけます。
+
+---
+
 ## Mixed Reality Toolkit
 [Mixed Reality Toolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity)は，HoloLensのアプリケーション開発をサポートするコンポーネント群です。よく勘違いされるのですが，MRTKはHoloLensアプリの開発に必ずしも必要はありません。ですが，MRTKを使うことでコーディングが苦手でも開発が楽にすむ部分が多いです。例えばHoloLens用のカメラオブジェクトや入力，UX周りをPrefabを用いて直ぐにシーンを構築できるだけではなく，UnityProjectの初期設定やアプリケーションのデプロイなどもサポートしてくれます。  
 
