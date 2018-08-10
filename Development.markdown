@@ -7,6 +7,13 @@ Unityのバージョンによって，HoloLensで利用できるAPIやサポー�
 現在の推奨環境は，[2017.4.x LTS](https://unity3d.com/jp/unity/qa/lts-releases) です。2018-2020の2年間のサポートが約束されており，安定性を求める場合こちらのバージョンを使うことをお勧めします。  
 最新のUnity2018でも開発は可能ですが，後述するMixed Reality Toolkit の相性問題もあるため最新の環境が最良とは断言できません。
 
+### UnityHub
+Unity公式から提供されている複数バージョンのUnityEditorを一括で管理するツールです。これまでのUnityは異なるバージョンをインストールするごとにショートカットが生成され，それらを使い分ける形をとっていました。UnityHubでは，UnityHubから指定したバージョンでプロジェクト新規作成，プロジェクトの一覧管理，，Hub経由でインストールしたUnityに後からVuforiaなどのコンポーネントを追加するなどができます。[(UnityHubを用いて複数バージョンのUnityEditorを管理する)](https://qiita.com/k7a/items/ca4547725434580bc3a9)  
+
+Vuforiaや後述するScriptingBackendの入れ忘れをした時に後からの導入が楽になるので，HoloLensアプリ開発でも役に立ちます。
+
+[DownLoad](https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.exe)
+
 ---
 ## Visual Studio
 コードを書くためのツールは何でもいいのですが，Unityで作ったアプリをビルドし，HoloLens上に展開するためには，[Visual Studio 2017](https://imagine.microsoft.com/ja-jp/Catalog/Product/530) が必要になります。  
@@ -20,29 +27,12 @@ Windows 10 SDK は[Archive](https://developer.microsoft.com/en-us/windows/downlo
 「Visual Studio Installer」 を立ち上げて，「詳細->変更」を押すと一覧が表示されます。「ユニバーサルWindowsプラットフォーム開発」を選択してインストールすると最新のWindows 10 SDK がインストールされます。また，この時オプションから過去のバージョンのWindows SDK も指定してDLすることができます。
 
 ---
-
-## Capabilities
-UnityからアプリをデプロイしてもCapabilitiesが有効になっておらず，機能が使えないという場合があります。例えば，カメラやマイクにアクセスする場合や，クライアントとしてサーバーと通信する，ファイルへアクセスする場合などはCapabilitiesでアプリケーションが利用できるように権限を与えてやる必要があります。  CapabilitiesはUnityのFile-> Build Settings -> Player Settings -> XR Settings -> Publish Settingsから設定します。
-
-量が多いので代表的なものだけあげていきます。
-
-|Capabilities|説明|
-|:--:|:---|
-|InternetClient|Sharingなどネットワークを経由して情報をやりとりする場合に必要です。|
-|WebCam|VuforiaなどCameraを使う場合に必要です。|
-|Microphone|音声入力などを使う場合に必要です。|
-|SpatialPerception|SpatialMappingを使う場合に必要です。|
-|Bluetooth|Xboxコントローラなどを使う場合に必要です。|
-
----
-
 # Scripting Runtime Version
-.NET Frameworkサポートと同等のバージョンが利用できます。2017までは3.5が標準で，4.6は試験的に利用できました。2018からは4.6が標準になります。4.6ではコーディングする上で受ける恩恵が多い上，MRTKでも問題なく動作するため，外部のAssetとの相性が悪くない限り4.6がいいでしょう。
+.NET Frameworkサポートと同等のバージョンが利用できます。2017までは3.5が標準で，4.6は試験的に利用できました。2018からは4.6が標準になります。4.6ではコーディングで受ける恩恵が多い上，MRTKでも問題なく動作するため，外部のAssetとの相性が悪くない限り4.6がいいでしょう。
 
 [C#6.0時代のUnity](https://qiita.com/divideby_zero/items/71a38acdbaa55e88e2d9)
 
 ---
-
 # Scripting Backend
 UWPのアプリケーション開発ではこの[Scripting backend](https://docs.unity3d.com/ja/current/Manual/windowsstore-scriptingbackends.html)を.NETかIL2CPPを選択する必要があります。どちらでもいいという訳ではなく，.NET環境とIL2CPP環境のそれぞれで，動くものと動かないものがあったりします。例えばMRTKで過去のissueを検索してみると，IL2CPPではSharingが動作しないなどといった報告も見かけます。  
 あまり解説記事も見当たらずおまじない的な扱いで使われている気もしますが，表面的な違いで言えば以下の違いになります。
@@ -74,6 +64,21 @@ Unityのインストーラから再度導入する形になります。新規イ
 Installsから追加したいUnityのバージョンからAddComponentで導入できます。
 - 2017: Windows Store .Net (or IL2CPP) Scripting Backend
 - 2018: UWP Build Supported .Net (or IL2CPP)
+
+---
+
+## Capabilities
+UnityからアプリをデプロイしてもCapabilitiesが有効になっておらず，機能が使えないという場合があります。例えば，カメラやマイクにアクセスする場合や，クライアントとしてサーバーと通信する，ファイルへアクセスする場合などはCapabilitiesでアプリケーションが利用できるように権限を与えてやる必要があります。  CapabilitiesはUnityのFile-> Build Settings -> Player Settings -> XR Settings -> Publish Settingsから設定します。
+
+量が多いので代表的なものだけあげていきます。
+
+|Capabilities|説明|
+|:--:|:---|
+|InternetClient|Sharingなどネットワークを経由して情報をやりとりする場合に必要です。|
+|WebCam|VuforiaなどCameraを使う場合に必要です。|
+|Microphone|音声入力などを使う場合に必要です。|
+|SpatialPerception|SpatialMappingを使う場合に必要です。|
+|Bluetooth|Xboxコントローラなどを使う場合に必要です。|
 
 ---
 
