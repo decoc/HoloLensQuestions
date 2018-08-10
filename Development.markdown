@@ -36,15 +36,27 @@ UnityからアプリをデプロイしてもCapabilitiesが有効になってお
 
 ---
 
+# Scripting Runtime Version
+.NET Frameworkサポートと同等のバージョンが利用できます。2017までは3.5が標準で，4.6は試験的に利用できました。2018からは4.6が標準になります。4.6ではコーディングする上で受ける恩恵が多い上，MRTKでも問題なく動作するため，外部のAssetとの相性が悪くない限り4.6がいいでしょう。
+
+[C#6.0時代のUnity](https://qiita.com/divideby_zero/items/71a38acdbaa55e88e2d9)
+
+---
+
 # Scripting Backend
-UWPのアプリケーション開発ではこのScripting backendを.NETかIL2CPPを選択する必要があります。あまり解説記事も見当たらずおまじない的な扱いで使われている気がします。表面的な違いで言えば以下の違いになります。
+UWPのアプリケーション開発ではこの[Scripting backend](https://docs.unity3d.com/ja/current/Manual/windowsstore-scriptingbackends.html)を.NETかIL2CPPを選択する必要があります。どちらでもいいという訳ではなく，.NET環境とIL2CPP環境のそれぞれで，動くものと動かないものがあったりします。例えばMRTKで過去のissueを検索してみると，IL2CPPではSharingが動作しないなどといった報告も見かけます。  
+あまり解説記事も見当たらずおまじない的な扱いで使われている気もしますが，表面的な違いで言えば以下の違いになります。
 
 ||ビルド速度|実行速度|C#プロジェクト出力の可否|サポート|
 |:---:|:---:|:---:|:---:|:---:|
 |.NET|早い|速くはない|可|将来的に切られる|
-|IL2CPP|遅い|速い|不可|積極的に移行作業が進む|
+|IL2CPP|遅い|速い|不可|将来的に移行|
 
-また，.NET環境とIL2CPP環境のそれぞれで，動くものと動かないものがあったりします。例えばMRTKで過去のissueを検索してみると，IL2CPPではSharingが動作しないなどといった報告も見かけます。
+これらの違いをちゃんと理解するためにはJITコンパイルとAOTコンパイルの仕組み，違いをまず知る必要があります。
+
+- [IL2CPPのしくみ](https://docs.unity3d.com/ja/current/Manual/IL2CPP-HowItWorks.html)
+- [IL2CPPに関する軽い話](https://www.google.co.jp/url?sa=t&rct=j&q=&esrc=s&source=web&cd=6&cad=rja&uact=8&ved=2ahUKEwiKtLyY3OHcAhUEQN4KHcxdCxcQFjAFegQIBhAB&url=https%3A%2F%2Fwww.slideshare.net%2FWooramYang%2Fil2-cpp-wooramyang-49666751&usg=AOvVaw2_L54wiVpvcgtfgYa2Lqvu)
+- [【Unity】Stripping Levelについて (プラットフォームによる差異の項)](https://www.f-sp.com/entry/2016/02/23/180816)
 
 ---
 
@@ -111,5 +123,3 @@ HoloLensのMicrosoft Storeから，[Holographic Remoting Player](https://www.mic
 Holographic Remotingは確かに便利機能ですがあくまで実行しているのは，PC側でHoloLens上ではありません。エアタップといった入力イベントはシミュレートできますが，HoloLensのカメラは利用できない，つまりVuforiaといったHoloLensのカメラを使ったデバッグはできません。また，UWPのコードも同様に実行されるのはEditor環境なので実行されないということに注意してください。
 
 ---
-
-
