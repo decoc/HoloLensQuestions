@@ -31,7 +31,7 @@ MRTKを使ってできることの概要。
 
 ## MRTKを使ったアプリケーション作成までの手順
 
-たぶんここが一番シンプルで分かりやすいと思います。  
+ここが一番シンプルで分かりやすいと思います。  
 [HoloLens ホログラフィックアプリケーションを作ってみた（Cube初級編）](https://www.nttpc.co.jp/technology/holoLens.html)
 
 一連の開発プロセスを学ぶにはこちらのスライドがおすすめです。  
@@ -39,11 +39,13 @@ MRTKを使ってできることの概要。
 
 # 使い方
 ## 設定
-HoloLensアプリ開発に必要な設定を行ってくれるEditor拡張があります。Editorの上部に「Mixed Reality Toolkit」が追加されています。「Configure」から設定を行います。
+HoloLensアプリ開発に必要な設定を行ってくれるEditor拡張があります。Editorの上部に「Mixed Reality Toolkit」が追加されており，「Configure」から各種設定を行います。
 
 ### Apply Mixed Reality Project Setting
+開発環境で述べたプロジェクトに必要な設定を行います。  
+
 |項目|内容|デフォルト|
-|:--:|:---|:---:|
+|:---|:---|:---:|
 |Target Windows Universal UWP||ON|
 |Enable XR||ON|
 |Build for Direct3D||ON|
@@ -53,8 +55,10 @@ HoloLensアプリ開発に必要な設定を行ってくれるEditor拡張があ
 |Set Default SplatialMapping Layer||ON|
 
 ### Apply Mixed Reality Scene Setting
+アプリに必要なCameraやカーソルなどのコンポーネントをシーンに生成します。  
+
 |項目|内容|デフォルト|
-|:--:|:---|:---:|
+|:---|:---|:---:|
 |Add the MixedRealityCamera prefab||ON|
 |Move Camera to Origin||ON|
 |Add the InputManager prefab||ON|
@@ -62,11 +66,47 @@ HoloLensアプリ開発に必要な設定を行ってくれるEditor拡張があ
 |Update World Canvas prefab||ON|
 
 ### Apply UWP Capability Setting
+マイクやカメラなどの利用権限の設定を行います。  
+
 |項目|内容|デフォルト|
-|:--:|:---|:---:|
+|:---|:---|:---:|
 |Microphone||OFF|
 |WebCam||OFF|
 |Spatial Perception||ON|
 |Internet Client||OFF|
 |Internet Client Server||OFF|
 |Private Network Client Server||OFF|
+
+## 基本コンポーネント
+基本的に3つのコンポーネントが必要です。
+
+Camera
+
+|項目|内容|
+|:---|:---|
+|HoloLensCamera|HoloLens用に設定されたカメラです。|
+|MixedRealityCamera|HoloLens兼IHMD用に設定されたカメラです。実行するデバイスに応じて自動で切り替えます。|
+|MixedRealityCameraParent|MixedRealityCameraを拡張したカメラです。IHMD用のテレポート移動が使えます。|
+
+Cursor
+
+|項目|内容|
+|:---|:---|
+|BaseCursor||
+|Cursor||
+|CursorWithFeedback||
+|DefaultCursor||
+|InteractiveMeshCursor||
+
+InputManager
+
+|項目|内容|
+|:---|:---|
+|InputManager||
+
+## その他のコンポーネント
+SpatialMapping
+
+|項目|内容|
+|:---|:---|
+|SpatialMapping||
