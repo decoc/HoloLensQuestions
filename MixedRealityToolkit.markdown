@@ -46,36 +46,36 @@ HoloLensアプリ開発に必要な設定を行ってくれるEditor拡張があ
 
 |項目|内容|デフォルト|
 |:---|:---|:---:|
-|Target Windows Universal UWP||ON|
-|Enable XR||ON|
-|Build for Direct3D||ON|
-|Target Occulded Device||OFF|
-|Enable Sharing Service||OFF|
-|Use Tookit-specific InputManager axis||OFF|
-|Set Default SplatialMapping Layer||ON|
+|Target Windows Universal UWP|プラットフォームをUWPに切り替えます|ON|
+|Enable XR|XR supportedを有効にします|ON|
+|Build for Direct3D|BuildTypeをD3Dにします|ON|
+|Target Occulded Device|IHMD向けにクオリティ設定を変更する|OFF|
+|Enable Sharing Service|Sharingに必要なコンポーネントをインポートする|OFF|
+|Use Tookit-specific InputManager axis|Xboxコントローラを使うためのInput設定を行う|OFF|
+|Set Default SplatialMapping Layer|LayerにSpatialMappingを追加する|ON|
 
 ### Apply Mixed Reality Scene Setting
 アプリに必要なCameraやカーソルなどのコンポーネントをシーンに生成します。  
 
 |項目|内容|デフォルト|
 |:---|:---|:---:|
-|Add the MixedRealityCamera prefab||ON|
-|Move Camera to Origin||ON|
-|Add the InputManager prefab||ON|
-|Add the Default Cursor prefab||ON|
-|Update World Canvas prefab||ON|
+|Add the MixedRealityCamera prefab|MixedRealityCameraをシーンに追加する|ON|
+|Move Camera to Origin|カメラを(0,0,0)に移動する|ON|
+|Add the InputManager prefab|InputManagerを生成する|ON|
+|Add the Default Cursor prefab|DefaultCursorを生成する|ON|
+|Update World Canvas prefab|シーン内のWorldSpaceに設定されたCanvasがカメラにFocusManagerのUIRaycastCameraを利用するように変更|ON|
 
 ### Apply UWP Capability Setting
 マイクやカメラなどの利用権限の設定を行います。  
 
 |項目|内容|デフォルト|
 |:---|:---|:---:|
-|Microphone||OFF|
-|WebCam||OFF|
-|Spatial Perception||ON|
-|Internet Client||OFF|
-|Internet Client Server||OFF|
-|Private Network Client Server||OFF|
+|Microphone|DictationRacognizerなどに利用するマイクを有効化|OFF|
+|WebCam|PhotoCaptureなどに利用するRGBカメラを有効化|OFF|
+|Spatial Perception|SpatialMappingなどに利用する空間認識を有効化|ON|
+|Internet Client|サーバーではなくクライアントとしてパブリックネットワークと通信するために有効化|OFF|
+|Internet Client Server|クライアントだけではなくサーバーとしても機能させる場合に有効化|OFF|
+|Private Network Client Server|プライベートネットワークでクライアントとして通信するために有効化|OFF|
 
 ## 基本コンポーネント
 基本的に3つのコンポーネントが必要です。
