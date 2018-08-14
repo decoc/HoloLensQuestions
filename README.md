@@ -7,8 +7,12 @@
 
 ---
 ## 開発
-- [開発環境](https://github.com/tattichan/HoloLensQuestions/blob/master/Development.markdown)
+- [開発環境](https://github.com/tattichan/HoloLensQuestions/blob/master/Development.markdown)Mie
+- [MixedRealityToolkit](https://github.com/tattichan/HoloLensQuestions/blob/master/MixedRealityToolkit.markdown)
+- [MixedRealityToolkit(vNext)](https://github.com/tattichan/HoloLensQuestions/blob/master/vNext.markdown)
 - [Vuforia](https://github.com/tattichan/HoloLensQuestions/blob/master/Vuforia.markdown)
-- [学習](https://github.com/tattichan/HoloLensQuestions/blob/master/Learning.markdown)
-- [逆引きTips](https://github.com/tattichan/HoloLensQuestions/blob/master/Tips.markdown)
 ---
+
+## 学習/調べる
+- [学習](https://github.com/tattichan/HoloLensQuestions/blob/master/Learning.markdown)
+- [Tips](https://github.com/tattichan/HoloLensQuestions/blob/master/Tips.markdown)
