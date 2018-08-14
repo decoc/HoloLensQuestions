@@ -123,8 +123,8 @@ Unity 5.6 - 2017 をサポートするバージョンと，2018以上をサポ�
 注意点として，Mixed Reality Toolkit はUnityの多くのバージョンをサポートしてくれてはいますが，最新の環境では動作しなかったり，Unity5といった古いバージョンでは一部動作しなかったりします。利用したい環境に合わせた適切なパッケージを選択することが重要になりますので，<b><u>Upgrade Guide をよく読みましょう。</u></b>
 
 詳細は，
-- Mixed Reality Toolkit
-- Mixed Reality Toolkit (vNext)
+- [Mixed Reality Toolkit](https://github.com/tattichan/HoloLensQuestions/blob/master/MixedRealityToolkit.markdown)
+- [Mixed Reality Toolkit (vNext)](https://github.com/tattichan/HoloLensQuestions/blob/master/vNext.markdown)
 
 で扱います。
 
