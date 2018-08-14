@@ -7,7 +7,7 @@
 
 ---
 ## 開発
-- [開発環境](https://github.com/tattichan/HoloLensQuestions/blob/master/Development.markdown)Mie
+- [開発環境](https://github.com/tattichan/HoloLensQuestions/blob/master/Development.markdown)
 - [MixedRealityToolkit](https://github.com/tattichan/HoloLensQuestions/blob/master/MixedRealityToolkit.markdown)
 - [MixedRealityToolkit(vNext)](https://github.com/tattichan/HoloLensQuestions/blob/master/vNext.markdown)
 - [Vuforia](https://github.com/tattichan/HoloLensQuestions/blob/master/Vuforia.markdown)
