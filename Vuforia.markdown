@@ -17,6 +17,8 @@
  　Vuforiaを使うことでこのように位置合わせが楽になりますが，一方設定項目が多いので使い方が分からないという話もよく聞きます。  
 　 UnityAssetをそのまま使う場合，Vuforiaのアカウント登録は必要ありませんが，任意のマーカーを使う場合には，Vuforiaのサイトへの登録，データベースの作成，ライセンスキーの取得が必要になります。  
  
+ 画像付きの分かりやすいやり方は[こちら](http://yotiky.hatenablog.com/entry/2018/08/15/HoloLens%E3%81%A7Vuforia%E3%82%92%E4%BD%BF%E3%81%86_%28Unity%26MRTK_2017%E4%B8%96%E4%BB%A3%29)
+ 
  ### Vuforia Website: 
  1. アカウントが必要です。Vuforia Developer Portal から[登録](https://developer.vuforia.com/vui/auth/register) しましょう。
  2. DevelpタブからTargetManagerタブを選択し，Add Databaseを押してデータベースを追加します。
