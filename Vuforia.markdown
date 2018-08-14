@@ -43,5 +43,64 @@
 VuforiaのTracking状態に応じた処理は，先のImageTargetにアタッチされているDefault Trackable Event Handler が 参考になります。　　
 ITrackableEventHandlerを継承し，OnTrackableStateChangedを実装した本クラスを通じてTrackingの状態を取得できます。例えば，Default Trackable Event Handlerでは，マーカーを認識したタイミングでImageTarget配下のオブジェクトを描画し，ロストしたタイミングで描画をオフにしています。  
 
-ですので，例えばマーカーを認識したタイミングでマーカーの位置とクォータニオンをイベントで送信し基準点として各オブジェクトの位置を補正し，使わなくなったARCameraをオフにするといった処理もできます。Vuforiaカメラは立ち上げたままだとアプリケーションのパフォーマンスへ影響するため，必要に応じてオンオフする方が好ましいです。
+ですので，例えばマーカーを認識したタイミングでマーカーの位置とクォータニオンをイベントで送信し基準点として各オブジェクトの位置を補正し，使わなくなったARCameraをオフにするといった処理もできます。Vuforiaカメラは立ち上げたままだとアプリケーションのパフォーマンスへ影響するため，必要に応じてオンオフする方が好ましいです。  
 
+DefaultTrackableEventHandlerについて簡単に解説します。
+```cs
+//ImageTargetに同じくアタッチされているTrackableBehaviourに登録しています
+protected virtual void Start()
+    {
+        mTrackableBehaviour = GetComponent<TrackableBehaviour>();
+        if (mTrackableBehaviour)
+            mTrackableBehaviour.RegisterTrackableEventHandler(this);
+    }
+
+//Destroy時には登録を解除する処理を委譲します
+protected virtual void OnDestroy()
+{
+    if (mTrackableBehaviour)
+        mTrackableBehaviour.UnregisterTrackableEventHandler(this);
+}
+```
+<br>
+
+ITrackableEventHandlerを継承して実装する処理部分です。検知した状態遷移を元に処理を行います。
+```cs
+    public void OnTrackableStateChanged(
+        TrackableBehaviour.Status previousStatus,
+        TrackableBehaviour.Status newStatus)
+    {
+        if (newStatus == TrackableBehaviour.Status.DETECTED ||
+            newStatus == TrackableBehaviour.Status.TRACKED ||
+            newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
+        {
+            Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
+            // 検知，トラッキング状態，ExtendedTrackingの状態でOnTrackingFoundを呼び出しています。中ではImageTarget配下のオブジェクトのRendererを全て取得し，ONにして描画を有効にしています。
+            OnTrackingFound();
+        }
+        else if (previousStatus == TrackableBehaviour.Status.TRACKED &&
+                 newStatus == TrackableBehaviour.Status.NOT_FOUND)
+        {
+            Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
+            // トラッキング状態からロスト状態になった時にTrackingLostを呼び出しています。中ではImageTarget配下のオブジェクトのRendererを全て取得し，OFFにして描画を無効にしています。
+            TrackingLost();
+        }
+        else
+        {
+            OnTrackingLost();
+        }
+    }
+```
+
+基本的にはOnTrackableStateChangedを参考に，自分で好きな処理を組んでいきます。例えば，トラッキング成功時にカメラをVuforiaカメラをオフにしたい場合には，以下のようにし，カメラ処理を切ります。
+
+```cs
+if (newStatus == TrackableBehaviour.Status.DETECTED ||
+            newStatus == TrackableBehaviour.Status.TRACKED ||
+            newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
+        {
+            VuforiaBehaviour.Instance.enabled = false;
+        }
+```
+
+また，この時にImageTargetの位置や回転を保存，送信してもいいでしょう。
