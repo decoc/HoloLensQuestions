@@ -116,6 +116,9 @@ UnityからアプリをデプロイしてもCapabilitiesが有効になってお
 
 また，Virtual Reality SDKのSettingから指定できるEnableDepthBufferSharingは，安定化平面の設置に関わります。こちらは有効にする必要はありません。詳細は[こちら](https://www.tattichan.work/entry/depthbuffer)。  
 
+#### 注意
+Virtual Reality Supportedを有効にした状態でシーンを再生すると，Mixed Reality Portal が立ち上がってしまう場合があります。そのような場合，Window -> Holographic Emulation -> Emulation Mode を None から Remote to Device に変更することでこの問題を回避することができます。
+
 ---
 
 # Mixed Reality Toolkit
