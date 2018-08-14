@@ -11,6 +11,8 @@
 - [MixedRealityToolkit](https://github.com/tattichan/HoloLensQuestions/blob/master/MixedRealityToolkit.markdown)
 - [MixedRealityToolkit(vNext)](https://github.com/tattichan/HoloLensQuestions/blob/master/vNext.markdown)
 - [Vuforia](https://github.com/tattichan/HoloLensQuestions/blob/master/Vuforia.markdown)
+- [SpectatorView](https://github.com/tattichan/HoloLensQuestions/blob/master/SpectatorView.markdown)
+
 ---
 
 ## 学習/調べる
