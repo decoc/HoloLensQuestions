@@ -121,6 +121,20 @@ Virtual Reality Supportedを有効にした状態でシーンを再生すると�
 
 ---
 
+# アプリケーションのビルド
+　作ったアプリをHoloLensにインストールするには２段階のプロセスを踏みます。  
+
+　1. Unityでビルドし，C# or C++ プロジェクトファイルを生成する  
+　2. 生成したプロジェクトファイルをVSでビルドし，HoloLens上に展開する
+
+## 1.Unityでビルドする
+　Build SettingsからBuildを押します。この時出力先のファイルをきかれるので，出力用のファイルをHoloLensAppなどといった名前で新規生成し，そこをビルド先にしましょう。
+ 
+## 2. VSでビルドする
+　1でビルドした先を開くと，XXX.slnというソリューションファイルが生成されていますので，VSから開きます。開いたら，VS上部の<b>ローカルデバイスをデバイスに変更し，DebugをReleaseに変更，さらにその隣をx86に指定します</b>。設定が終わったら，HoloLensをUSBで接続し，デバッグなしで実行(Ctr+F5)を押してアプリをビルドします。
+
+---
+
 # Mixed Reality Toolkit
 [Mixed Reality Toolit](https://github.com/Microsoft/MixedRealityToolkit-Unity)は，HoloLensのアプリケーション開発をサポートするコンポーネント群です。よく勘違いされるのですが，MRTKはHoloLensアプリの開発に必ずしも必要ではありません。
 
