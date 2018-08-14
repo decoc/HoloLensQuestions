@@ -1,7 +1,7 @@
 # Mixed Reality Toolkit
-[Mixed Reality Toolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity)は，HoloLensのアプリケーション開発をサポートするコンポーネント群です。よく勘違いされるのですが，MRTKはHoloLensアプリの開発に必ずしも必要はありません。ですが，MRTKを使うことでコーディングが苦手でも開発が楽にすむ部分が多いです。例えばHoloLens用のカメラオブジェクトや入力，UX周りをPrefabを用いて直ぐにシーンを構築できるだけではなく，UnityProjectの初期設定やアプリケーションのデプロイなどもサポートしてくれます。  
+[Mixed Reality Toolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity)は，HoloLensのアプリケーション開発をサポートするコンポーネント群です。MRTKを使うことでコーディングが苦手でも開発が楽にすむ部分が多いです。例えばHoloLens用のカメラオブジェクトや入力，UX周りをPrefabを用いて直ぐにシーンを構築できるだけではなく，UnityProjectの初期設定やアプリケーションのデプロイなどもサポートしてくれます。  
 Mixed Reality Toolkitのバージョンはいくつかあり，先のGitHubリンクの[Release](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases)からダウンロードすることができます。HoloToolkit-Unity-XXXX.X.XがMRTKの本体で，HoloToolkit-Unity-Examples-XXXX.X.Xでその使い方を学ぶことができます。
-注意点として，Mixed Reality Toolkit はUnityの多くのバージョンをサポートしてくれてはいますが，最新の環境では動作しなかったり，Unity5といった古いバージョンでは一部動作しなかったりします。利用したい環境に合わせた適切なパッケージを選択することが重要になりますので，<b><u>Upgrade Guide をよく読みましょう。</u></b>
+注意点として，Mixed Reality Toolkit はUnityの多くのバージョンをサポートしてくれてはいますが，最新の環境では動作しなかったり，Unity5といった古いバージョンでは一部動作しなかったりします。利用したい環境に合わせた適切なパッケージを選択することが重要になりますので，<b><u>Release Note, Upgrade Guide をよく読みましょう。</u></b>
 
 以下はMRTK 2017.4.0.0の例です。
 
@@ -13,7 +13,7 @@ Mixed Reality Toolkitのバージョンはいくつかあり，先のGitHubリ�
 - Fall Creators Update
 
 ## 概要把握
-どんなことができるかの全体を把握するにはこちらのまとめがおすすめです。  
+MRTKを使ってできることの概要。  
 [Mixed Reality Toolkit (MRTK)の有用なビルディングブロック](https://medium.com/@dongyoonpark/mixed-reality-toolkit-mrtk-%E3%81%AE%E6%9C%89%E7%94%A8%E3%81%AA%E3%83%93%E3%83%AB%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF-4eb343d474cb)
 
 ## 機能一覧
@@ -36,3 +36,37 @@ Mixed Reality Toolkitのバージョンはいくつかあり，先のGitHubリ�
 
 一連の開発プロセスを学ぶにはこちらのスライドがおすすめです。  
 [UnityによるHoloLensアプリケーション入門](https://www.slideshare.net/YuichiIshii/unityhololens-92864583)
+
+# 使い方
+## 設定
+HoloLensアプリ開発に必要な設定を行ってくれるEditor拡張があります。Editorの上部に「Mixed Reality Toolkit」が追加されています。「Configure」から設定を行います。
+
+### Apply Mixed Reality Project Setting
+|項目|内容|デフォルト|
+|:--:|:---|:---:|
+|Target Windows Universal UWP||ON|
+|Enable XR||ON|
+|Build for Direct3D||ON|
+|Target Occulded Device||OFF|
+|Enable Sharing Service||OFF|
+|Use Tookit-specific InputManager axis||OFF|
+|Set Default SplatialMapping Layer||ON|
+
+### Apply Mixed Reality Scene Setting
+|項目|内容|デフォルト|
+|:--:|:---|:---:|
+|Add the MixedRealityCamera prefab||ON|
+|Move Camera to Origin||ON|
+|Add the InputManager prefab||ON|
+|Add the Default Cursor prefab||ON|
+|Update World Canvas prefab||ON|
+
+### Apply UWP Capability Setting
+|項目|内容|デフォルト|
+|:--:|:---|:---:|
+|Microphone||OFF|
+|WebCam||OFF|
+|Spatial Perception||ON|
+|Internet Client||OFF|
+|Internet Client Server||OFF|
+|Private Network Client Server||OFF|
