@@ -111,6 +111,12 @@ UnityからアプリをデプロイしてもCapabilitiesが有効になってお
 |Bluetooth|Xboxコントローラなどを使う場合に必要です。|
 
 ---
+### XR Settings
+<b>Virtual Reality Supported が有効でないと3DViewになりません。必ず有効にしてください。</b>  
+
+また，Virtual Reality SDKのSettingから指定できるEnableDepthBufferSharingは，安定化平面の設置に関わります。こちらは有効にする必要はありません。詳細は[こちら](https://www.tattichan.work/entry/depthbuffer)。  
+
+---
 
 # Mixed Reality Toolkit
 [Mixed Reality Toolit](https://github.com/Microsoft/MixedRealityToolkit-Unity)は，HoloLensのアプリケーション開発をサポートするコンポーネント群です。よく勘違いされるのですが，MRTKはHoloLensアプリの開発に必ずしも必要ではありません。
