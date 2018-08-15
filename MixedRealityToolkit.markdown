@@ -78,7 +78,7 @@ HoloLensアプリ開発に必要な設定を行ってくれるEditor拡張があ
 |Private Network Client Server|プライベートネットワークでクライアントとして通信するために有効化|OFF|
 
 ## 基本コンポーネント
-基本的に3つのコンポーネントが必要です。
+基本的に3つのコンポーネントが必要です。これらコンポーネントは先のSceneSettingからも自動生成できますが，自動生成されるもの以外にもいくつかの種類があります。
 
 Camera
 
@@ -106,7 +106,7 @@ InputManager
 
 ## その他のコンポーネント
 SpatialMapping
-
+SpatialMappingを生成します。CapabilityのSpatialPerceptionが必要です。
 |項目|内容|
 |:---|:---|
 |SpatialMapping||
